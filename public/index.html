@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AWS Rekognition</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script defer src="./index.js"></script>
+  </head>
+  <body>
+    <h1>AWS Rekognition Demo</h1>
+    <div class="container">
+      <h2>Encontrar etiquetas en imágenes</h2>
+      <form id="form-labels" enctype="multipart/form-data">
+        <label class="custom-file-upload" for="labels-image">Subir imagen para labels</label>
+        <input
+          type="file"
+          name="labels-image"
+          id="labels-image"
+          accept=".png,.jpg"
+          onchange="showImage(this, 'img-labels')"
+        />
+        <button type="submit">Encontrar labels</button>
+      </form>
+      <img id="img-labels" src="" alt="" />
+      <h3>Resultados etiquetas:</h3>
+      <ul id="labels-list"></ul>
+    </div>
+
+    <div class="container">
+      <h2>Reconocer celebridades en imágenes</h2>
+      <form id="form-celebrity" enctype="multipart/form-data">
+        <label class="custom-file-upload" for="celebrity-image">Subir imagen para encontrar celebridades</label>
+        <input
+          type="file"
+          name="celebrity-image"
+          id="celebrity-image"
+          accept=".png,.jpg"
+          onchange="showImage(this, 'img-celebrity')"
+        />
+        <button type="submit">Encontrar celebridades</button>
+      </form>
+      <img id="img-celebrity" src="" alt="" />
+      <h3>Resultados celebridades:</h3>
+      <ul id="celebrity-list"></ul>
+    </div>
+
+    <div class="container">
+      <h2>Reconocer contenido explícito</h2>
+      <form id="form-moderation" enctype="multipart/form-data">
+        <label class="custom-file-upload" for="moderation-image">Subir imagen para moderar contenido</label>
+        <input
+          type="file"
+          name="moderation-image"
+          id="moderation-image"
+          accept=".png,.jpg"
+          onchange="showImage(this, 'img-moderation')"
+        />
+        <button type="submit">Moderar contenido</button>
+      </form>
+      <img id="img-moderation" src="" alt="" />
+      <h3>Resultados contenido moderado:</h3>
+      <ul id="moderation-list"></ul>
+    </div>
+  </body>
+</html>

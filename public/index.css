@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background-color: #222222;
+  color: white;
+}
+
+.container {
+  margin: 0 6rem;
+}
+
+.container:first-of-type {
+  padding-top: 1rem;
+}
+
+.container:nth-of-type(n + 2) {
+  margin-top: 3rem;
+}
+
+a {
+  color: #00b7ff;
+}
+
+hr {
+  max-width: 600px;
+  width: 100%;
+}
+
+input {
+  width: 400px;
+  height: 40px;
+  display: block;
+  padding-left: 1rem;
+  outline: none;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+button,
+.custom-file-upload {
+  padding: 10px 25px;
+  border: 2px solid white;
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: block;
+  margin: 1rem 0 1rem;
+  transition: all 0.3s ease;
+  width: 400px;
+  outline: none;
+  text-align: center;
+  font-size: 1rem;
+}
+
+button:hover,
+.custom-file-upload:hover {
+  box-shadow: -7px -7px 20px 0px rgba(20, 20, 20, 0.6), -4px -4px 5px 0px rgba(53, 53, 53, 0.6),
+    7px 7px 20px 0px rgba(241, 241, 241, 0.133), 4px 4px 5px 0px rgba(236, 236, 236, 0.067);
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  padding: 1rem 2rem;
+}
